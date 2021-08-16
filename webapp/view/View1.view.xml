@@ -1,0 +1,44 @@
+<mvc:View controllerName="zodata-projzodata_proj.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Table id="table1" items="{path : 'sapprod>/'}"
+					growing="true"
+					growingThreshold="8"
+					growingScrollToLoad="false">
+						<columns>
+							<Column>
+								<Text text="ProductID"></Text>
+							</Column>
+							<Column>
+								<Text text="TypeCode"></Text>
+							</Column>
+							<Column>
+								<Text text="Category"></Text>
+							</Column>
+							<Column>
+								<Text text="Name"></Text>
+							</Column>
+							<Column demandPopin="true" minScreenWidth="Tablet">
+								<Text text="CreatedAt"></Text>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{sapprod>ProductID}"/>
+									<Text text="{sapprod>TypeCode}"/>
+									<Text text="{sapprod>Category}"/>
+									<Text text="{sapprod>Name}"/>
+									<Text text="{sapprod>CreatedAt}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
